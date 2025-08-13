@@ -1,0 +1,278 @@
+% Cadabra notebook version 1.2
+\documentclass[11pt]{article}
+\usepackage[textwidth=460pt, textheight=660pt]{geometry}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{amssymb}
+\usepackage[parfill]{parskip}
+\usepackage{breqn}
+\usepackage{tableaux}
+\def\specialcolon{\mathrel{\mathop{:}}\hspace{-.5em}}
+\renewcommand{\bar}[1]{\overline{#1}}
+\begin{document}
+{\color[named]{Blue}\begin{verbatim}
+{M,N,K,L,P,Q,R,S,T,U,V, M#}::Indices(name=gl4curved, position=independent).
+{A,B,C,D,E,F,G,H, A#}::Indices(name=gl4flat, position=independent).
+{m,n,k,l,p,q,r,s,t,u,v,m#}::Indices(name=gl3curved, parent=oddcurved, position=independent).
+{a,b,c,d,f,g,h,a#}::Indices(name=gl3flat, parent=oddflat, position=independent).
+{i,j,i#,j#}::Indices(name=Killing, position=independent).
+
+{M,N,K,L,P,Q,R,S,T,U,V, M#}::Integer(1..4).
+{A,B,C,D,E,F,G,H, A#}::Integer(1..4).
+{m,n,k,l,p,q,r,s,t,u,v,m#}::Integer(1..3).
+{a,b,c,d,f,g,h,a#}::Integer(1..3).
+
+F^{A B}_{C}::TableauSymmetry(shape={1,1}, indices={0,1}).
+F^{a b}_{c}::TableauSymmetry(shape={1,1}, indices={0,1}).
+F^{a b}_{4}::TableauSymmetry(shape={1,1}, indices={0,1}).
+f_{a b}^{c}::TableauSymmetry(shape={1,1}, indices={0,1}).
+f_{i1 i2}^{i3}::TableauSymmetry(shape={1,1}, indices={0,1}).
+\Gamma^{m}_{k n}::TableauSymmetry(shape={2}, indices={1,2}).
+F_{a b}^{c}::TableauSymmetry(shape={2}, indices={0,1}).
+
+G^{A B}::Symmetric.
+G_{A B}::Symmetric.
+
+h^{m n}::Symmetric.
+h_{m n}::Symmetric.
+
+\partial{#}::Derivative.
+\nabla{#}::Derivative.
+\delta{#}::KroneckerDelta.
+\epsilon{#}::EpsilonTensor(delta = \delta).
+
+#{}::SortOrder.
+
+\partial{#}::WeightInherit(label=all, type=Additive):
+\nabla{#}::WeightInherit(label=all, type=Additive):
+
+W_{M}^{N}::Weight(label=W, value=1):
+\end{verbatim}}
+% Begin TeX comment
+Assigning list property Indices to $\{M,\; N,\; K,\; L,\; P,\; Q,\; R,\; S,\; T,\; U,\; V,\; M\#\}$.
+\\
+% End TeX comment
+% Begin TeX comment
+Assigning list property Indices to $\{A,\; B,\; C,\; D,\; E,\; F,\; G,\; H,\; A\#\}$.
+\\
+% End TeX comment
+% Begin TeX comment
+Assigning list property Indices to $\{m,\; n,\; k,\; l,\; p,\; q,\; r,\; s,\; t,\; u,\; v,\; m\#\}$.
+\\
+% End TeX comment
+% Begin TeX comment
+Assigning list property Indices to $\{a,\; b,\; c,\; d,\; f,\; g,\; h,\; a\#\}$.
+\\
+% End TeX comment
+% Begin TeX comment
+Assigning list property Indices to $\{i,\; j,\; i\#,\; j\#\}$.
+\\
+% End TeX comment
+% Begin TeX comment
+Assigning property Integer to $M$, $N$, $K$, $L$, $P$, $Q$, $R$, $S$, $T$, $U$, $V$, $M\#$.
+\\
+% End TeX comment
+% Begin TeX comment
+Assigning property Integer to $A$, $B$, $C$, $D$, $E$, $F$, $G$, $H$, $A\#$.
+\\
+% End TeX comment
+% Begin TeX comment
+Assigning property Integer to $m$, $n$, $k$, $l$, $p$, $q$, $r$, $s$, $t$, $u$, $v$, $m\#$.
+\\
+% End TeX comment
+% Begin TeX comment
+Assigning property Integer to $a$, $b$, $c$, $d$, $f$, $g$, $h$, $a\#$.
+\\
+% End TeX comment
+% Begin TeX comment
+Assigning property TableauSymmetry to ${F}^{A B}\,_{C}$.
+\\
+% End TeX comment
+% Begin TeX comment
+Assigning property TableauSymmetry to ${F}^{a b}\,_{c}$.
+\\
+% End TeX comment
+% Begin TeX comment
+Assigning property TableauSymmetry to ${F}^{a b}\,_{4}$.
+\\
+% End TeX comment
+% Begin TeX comment
+Assigning property TableauSymmetry to ${f}_{a b}\,^{c}$.
+\\
+% End TeX comment
+% Begin TeX comment
+Assigning property TableauSymmetry to ${f}_{i1 i2}\,^{i3}$.
+\\
+% End TeX comment
+% Begin TeX comment
+Assigning property TableauSymmetry to ${\Gamma}^{m}\,_{k n}$.
+\\
+% End TeX comment
+% Begin TeX comment
+Assigning property TableauSymmetry to ${F}_{a b}\,^{c}$.
+\\
+% End TeX comment
+% Begin TeX comment
+Assigning property Symmetric to ${G}^{A B}$.
+\\
+% End TeX comment
+% Begin TeX comment
+Assigning property Symmetric to ${G}_{A B}$.
+\\
+% End TeX comment
+% Begin TeX comment
+Assigning property Symmetric to ${h}^{m n}$.
+\\
+% End TeX comment
+% Begin TeX comment
+Assigning property Symmetric to ${h}_{m n}$.
+\\
+% End TeX comment
+% Begin TeX comment
+Assigning property Derivative to $\partial{\#}\, $.
+\\
+% End TeX comment
+% Begin TeX comment
+Assigning property Derivative to $\nabla{\#}\, $.
+\\
+% End TeX comment
+% Begin TeX comment
+Assigning property KroneckerDelta to $\delta(\#)$.
+\\
+% End TeX comment
+% Begin TeX comment
+Assigning property EpsilonTensor to $\epsilon(\#)$.
+\\
+% End TeX comment
+% Begin TeX comment
+Assigning property WeightInherit to $\partial{\#}\, $.
+\\
+% End TeX comment
+% Begin TeX comment
+Assigning property WeightInherit to $\nabla{\#}\, $.
+\\
+% End TeX comment
+% Begin TeX comment
+Assigning property Weight to ${W}_{M}\,^{N}$.
+\\
+% End TeX comment
+{\color[named]{Blue}\begin{verbatim}
+F := - F^{A B}_{C} R_{A}^{M} R_{B}^{N} \partial_{M}{R^{C}_{N}} + F^{A B}_{C} R_{A}^{M} R_{B}^{N} \partial_{N}{R^{C}_{M}};
+@distribute!!(%):
+@substitute!!(%)(
+R_{C}^{M} -> E_{C}^{M} - W_{K}^{M} E_{C}^{K},
+R^{C}_{M} -> E^{C}_{M} + W_{M}^{K} E^{C}_{K},
+):
+@distribute!!(%):
+@prodrule!!(%):
+@distribute!!(%):
+@canonicalise!!(%):
+@prodsort!!(%):
+@rename_dummies!(%):
+@collect_terms!!(%):
+@drop_weight!!(%){W}{0};
+\end{verbatim}}
+% orig
+%  - F^{A B}_{C} R_{A}^{M} R_{B}^{N} \partial_{M}{R^{C}_{N}} + F^{A B}_{C} R_{A}^{M} R_{B}^{N} \partial_{N}{R^{C}_{M}}
+% end_orig
+\begin{dmath*}[compact, spread=2pt]
+F\specialcolon{}=  - {F}^{A B}\,_{C} {R}_{A}\,^{M} {R}_{B}\,^{N} {\partial}_{M}{{R}^{C}\,_{N}}\,  + {F}^{A B}\,_{C} {R}_{A}\,^{M} {R}_{B}\,^{N} {\partial}_{N}{{R}^{C}\,_{M}}\, ;
+\end{dmath*}
+% Begin TeX comment
+@distribute: not applicable.
+% End TeX comment
+% orig
+%  - 2 E_{A}^{M} E_{B}^{N} E^{C}_{K} F^{A B}_{C} \partial_{M}{W_{N}^{K}} - 2 E_{A}^{M} E_{B}^{N} E^{C}_{K} F^{A B}_{C} W_{M}^{L} \partial_{N}{W_{L}^{K}} - 2 E_{A}^{M} E_{B}^{N} F^{A B}_{C} W_{M}^{K} W_{K}^{L} \partial_{N}{E^{C}_{L}} + 2 E_{A}^{M} E_{B}^{N} F^{A B}_{C} W_{M}^{K} \partial_{K}{E^{C}_{N}} + 2 E_{A}^{M} E_{B}^{N} E^{C}_{K} F^{A B}_{C} W_{M}^{L} \partial_{L}{W_{N}^{K}} - 2 E_{A}^{M} E_{B}^{N} E^{C}_{K} F^{A B}_{C} W_{M}^{L} W_{N}^{P} \partial_{L}{W_{P}^{K}} + 2 E_{A}^{M} E_{B}^{N} F^{A B}_{C} W_{M}^{K} W_{K}^{L} W_{N}^{P} \partial_{P}{E^{C}_{L}}
+% end_orig
+\begin{dmath*}[compact, spread=2pt]
+F\specialcolon{}=  - 2\, {E}_{A}\,^{M} {E}_{B}\,^{N} {E}^{C}\,_{K} {F}^{A B}\,_{C} {\partial}_{M}{{W}_{N}\,^{K}}\,  - 2\, {E}_{A}\,^{M} {E}_{B}\,^{N} {E}^{C}\,_{K} {F}^{A B}\,_{C} {W}_{M}\,^{L} {\partial}_{N}{{W}_{L}\,^{K}}\,  - 2\, {E}_{A}\,^{M} {E}_{B}\,^{N} {F}^{A B}\,_{C} {W}_{M}\,^{K} {W}_{K}\,^{L} {\partial}_{N}{{E}^{C}\,_{L}}\,  + 2\, {E}_{A}\,^{M} {E}_{B}\,^{N} {F}^{A B}\,_{C} {W}_{M}\,^{K} {\partial}_{K}{{E}^{C}\,_{N}}\,  + 2\, {E}_{A}\,^{M} {E}_{B}\,^{N} {E}^{C}\,_{K} {F}^{A B}\,_{C} {W}_{M}\,^{L} {\partial}_{L}{{W}_{N}\,^{K}}\,  - 2\, {E}_{A}\,^{M} {E}_{B}\,^{N} {E}^{C}\,_{K} {F}^{A B}\,_{C} {W}_{M}\,^{L} {W}_{N}\,^{P} {\partial}_{L}{{W}_{P}\,^{K}}\,  + 2\, {E}_{A}\,^{M} {E}_{B}\,^{N} {F}^{A B}\,_{C} {W}_{M}\,^{K} {W}_{K}\,^{L} {W}_{N}\,^{P} {\partial}_{P}{{E}^{C}\,_{L}}\, ;
+\end{dmath*}
+{\color[named]{Blue}\begin{verbatim}
+@split_index!!(%){M, m, 4}:
+@split_index!!(%){A, a, 4}:
+@substitute!!(%)(
+\partial_{4}{A??} -> 0,
+W_{m}^{n} -> 0,
+W_{4}^{4} -> 0,
+W_{m}^{4} -> 0,
+W_{4}^{n} -> B^{n},
+E_{a}^{m} -> ef**(-1/2) e_{a}^{m},
+E_{4}^{m} -> 0,
+E_{a}^{4} -> - ef**(-1/2) A_{a},
+E_{4}^{4} -> ef**(1/2),
+E^{a}_{m} -> ef**(1/2) e^{a}_{m},
+E^{4}_{m} -> ef**(-1/2) A_{m},
+E^{a}_{4} -> 0,
+E^{4}_{4} -> ef**(-1/2),
+F^{4 4}_{A??} -> 0,
+F^{4 a}_{A??} -> - F^{a 4}_{A??},
+):
+@distribute!!(%):
+@prodrule!!(%):
+@distribute!!(%):
+@prodrule!!(%):
+@distribute!!(%):
+@substitute!!(%)(
+\partial_{m}{ef} -> ef \partial_{m}{\phi},
+):
+@distribute!!(%):
+@prodrule!!(%):
+@eliminate_kr!!(%):
+@prodsort!!(%):
+@canonicalise!!(%):
+@prodsort!!(%):
+@rename_dummies!(%):
+@collect_factors!!(%):
+@collect_terms!!(%):
+@factor_out!(%){F^{a b}_{c}, F^{a b}_{4}, F^{a 4}_{b}, F^{a 4}_{4}};
+\end{verbatim}}
+% Begin TeX comment
+@distribute: not applicable.
+% End TeX comment
+% Begin TeX comment
+@prodrule: not applicable.
+% End TeX comment
+% Begin TeX comment
+@distribute: not applicable.
+% End TeX comment
+% Begin TeX comment
+@distribute: not applicable.
+% End TeX comment
+% Begin TeX comment
+@prodrule: not applicable.
+% End TeX comment
+% Begin TeX comment
+@eliminate\_kr: not applicable.
+% End TeX comment
+% Begin TeX comment
+@prodsort: not applicable.
+% End TeX comment
+% orig
+% F^{a 4}_{4} ( - 2 A_{m} \partial_{n}{B^{m}} ef**{(-1/2)} e_{a}^{n} + A_{m} B^{n} \partial_{n}{\phi} ef**{(-1/2)} e_{a}^{m} - 2 B^{m} \partial_{m}{A_{n}} ef**{(-1/2)} e_{a}^{n}) + F^{a 4}_{b} ( - 2 \partial_{m}{B^{n}} ef**{1/2} e_{a}^{m} e^{b}_{n} - B^{m} \partial_{m}{\phi} ef**{1/2} e_{a}^{n} e^{b}_{n} - 2 B^{m} \partial_{m}{e^{b}_{n}} ef**{1/2} e_{a}^{n}) + F^{a b}_{4} ( - 2 A_{a} A_{m} \partial_{n}{B^{m}} ef**{(-3/2)} e_{b}^{n} + A_{a} A_{m} B^{n} \partial_{n}{\phi} ef**{(-3/2)} e_{b}^{m} - 2 A_{a} B^{m} \partial_{m}{A_{n}} ef**{(-3/2)} e_{b}^{n}) + F^{a b}_{c} ( - 2 A_{a} \partial_{m}{B^{n}} ef**{(-1/2)} e_{b}^{m} e^{c}_{n} - A_{a} B^{m} \partial_{m}{\phi} ef**{(-1/2)} e_{b}^{n} e^{c}_{n} - 2 A_{a} B^{m} \partial_{m}{e^{c}_{n}} ef**{(-1/2)} e_{b}^{n})
+% end_orig
+\begin{dmath*}[compact, spread=2pt]
+F\specialcolon{}= {F}^{a 4}\,_{4} ( - 2\, {A}_{m} {\partial}_{n}{{B}^{m}}\,  ef{}^{(\frac{-1}{2})} {e}_{a}\,^{n} + {A}_{m} {B}^{n} {\partial}_{n}{\phi}\,  ef{}^{(\frac{-1}{2})} {e}_{a}\,^{m} - 2\, {B}^{m} {\partial}_{m}{{A}_{n}}\,  ef{}^{(\frac{-1}{2})} {e}_{a}\,^{n}) + {F}^{a 4}\,_{b} ( - 2\, {\partial}_{m}{{B}^{n}}\,  ef{}^{\frac{1}{2}} {e}_{a}\,^{m} {e}^{b}\,_{n} - {B}^{m} {\partial}_{m}{\phi}\,  ef{}^{\frac{1}{2}} {e}_{a}\,^{n} {e}^{b}\,_{n} - 2\, {B}^{m} {\partial}_{m}{{e}^{b}\,_{n}}\,  ef{}^{\frac{1}{2}} {e}_{a}\,^{n}) + {F}^{a b}\,_{4} ( - 2\, {A}_{a} {A}_{m} {\partial}_{n}{{B}^{m}}\,  ef{}^{(\frac{-3}{2})} {e}_{b}\,^{n} + {A}_{a} {A}_{m} {B}^{n} {\partial}_{n}{\phi}\,  ef{}^{(\frac{-3}{2})} {e}_{b}\,^{m} - 2\, {A}_{a} {B}^{m} {\partial}_{m}{{A}_{n}}\,  ef{}^{(\frac{-3}{2})} {e}_{b}\,^{n}) + {F}^{a b}\,_{c} ( - 2\, {A}_{a} {\partial}_{m}{{B}^{n}}\,  ef{}^{(\frac{-1}{2})} {e}_{b}\,^{m} {e}^{c}\,_{n} - {A}_{a} {B}^{m} {\partial}_{m}{\phi}\,  ef{}^{(\frac{-1}{2})} {e}_{b}\,^{n} {e}^{c}\,_{n} - 2\, {A}_{a} {B}^{m} {\partial}_{m}{{e}^{c}\,_{n}}\,  ef{}^{(\frac{-1}{2})} {e}_{b}\,^{n});
+\end{dmath*}
+{\color[named]{Blue}\begin{verbatim}
+@substitute!!(%)(
+B^{m} \partial_{m}{e^{a}_{k}} -> - e^{a}_{m} \partial_{k}{B^{m}},
+B^{m} \partial_{m}{e_{a}^{k}} -> e_{a}^{m} \partial_{m}{B^{k}},
+B^{m} \partial_{m}{A_{n}} -> - A_{m} \partial_{n}{B^{m}},
+B^{m} \partial_{m}{\phi} -> 0,
+e^{b}_{m} e_{b}^{n} -> \delta_{m}^{n},
+):
+@distribute!!(%):
+@canonicalise!!(%):
+@prodsort!!(%):
+@rename_dummies!(%):
+@collect_terms!!(%);
+\end{verbatim}}
+% Begin TeX comment
+@canonicalise: not applicable.
+% End TeX comment
+% orig
+% 0
+% end_orig
+\begin{dmath*}[compact, spread=2pt]
+F\specialcolon{}= 0;
+\end{dmath*}
+\end{document}
