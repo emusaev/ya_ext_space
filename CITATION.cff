@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Gubarev"
+  given-names: "Kirill"
+  orcid: "https://orcid.org/00000-0002-7258-9761"  
+- family-names: "Musaev"
+  given-names: "Edvard T."
+  orcid: "https://orcid.org/0000-0002-1796-1794"
+title:emusaev/ya_ext_space: Uni-vector
+version: 1.0.0
+doi: 10.5281/zenodo.16831994
+date-released: 2025-08-13
+url: "https://github.com/emusaev/ya_ext_space"
